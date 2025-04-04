@@ -151,7 +151,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Tire Monitor',
+      title: 'Bicycle Tire Monitor',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.blue),
         useMaterial3: true,
@@ -176,10 +176,7 @@ class _TireMonitorPageState extends State<TireMonitorPage> {
   late final TireMonitorService _monitorService;
   late final TireMonitorSettings _settings;
   Map<String, TireData> tireData = {
-    'FL': TireData(position: 'FL', pressure: 85.0, wear: 0.8),
-    'FR': TireData(position: 'FR', pressure: 92.0, wear: 0.7),
-    'RL': TireData(position: 'RL', pressure: 78.0, wear: 0.9),
-    'RR': TireData(position: 'RR', pressure: 88.0, wear: 0.85),
+    'Rear': TireData(position: 'Rear', pressure: 85.0, wear: 0.8),
   };
   ConnectionStatus _connectionStatus = ConnectionStatus.disconnected;
   DateTime? _lastUpdateTime;
@@ -407,7 +404,7 @@ class TireStatusCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              position,
+              'Bicycle Tire',
               style: const TextStyle(
                 fontSize: 20,
                 fontWeight: FontWeight.bold,
